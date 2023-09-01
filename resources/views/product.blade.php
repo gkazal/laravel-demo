@@ -50,8 +50,6 @@
                                             <td>{{$product->name}}</td>
                                             <td>{{$product->price}}</td>
                                             <td>{{$product->category}}</td>
-
-                                            <!-- <td>{{$product->Photo}}</td> -->
                                             <td>
                                                 <img style="width: 60px;" src="{{ asset('images/products/'.$product->Photo) }}" alt="">
                                             </td>

@@ -56,8 +56,14 @@ Route::get('category/delete/{id}', [CategoryController::class, 'destroy'])->name
 
 
 //  Sub category crud operations...
+Route::get('subCategory/index', [SubCategoryController::class, 'index'])->name('subCategory.index');
+
 Route::get('subCategory/create', [SubCategoryController::class, 'create'])->name('subCategory.create');
 Route::post('subCategory/store', [SubCategoryController::class, 'store'])->name('subCategory.store');
+Route::get('subCategory/delete/{id}', [SubCategoryController::class, 'destroy'])->name('subCategory.delete');
+Route::get('subCategory/edit/{id}', [SubCategoryController::class, 'edit'])->name('subCategory.edit');
+Route::post('subCategory/update/{id}', [SubCategoryController::class, 'update'])->name('subCategory.update');
+
  
 
 

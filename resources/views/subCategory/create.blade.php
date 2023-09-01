@@ -9,16 +9,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
+        
 </head>
 <body>
 
 <h1>Create SubCategory</h1>
 
-<div class="row justify-content-center">
-    <div class="col-md-3">
+</div>
         
         <form class="border border-primary p-5 mt-5" method="post" action="{{ route('subCategory.store') }}" enctype="multipart/form-data">
             @csrf
+
             <div>
                 <label for="" class="form-label">Code</label>
                 <input type="text" name="code"  class="form-control" placeholder="code" required>
@@ -28,6 +29,7 @@
                 <label for="" class="form-label">Choose Category</label>
                 
                 <select class="form-select" name="category_id" aria-label="Default select example">
+                    <option value="0">Please Select Category</option>
                     @foreach ($categories as $row)
                         <option value="{{ $row->id }}"> {{ $row->category_name }} </option>
                     @endforeach
@@ -54,9 +56,11 @@
             <div class="mt-4">
                 <button type="submit" class="btn btn-primary " >Save</button>
             </div>
+            
 
 
         </form>
+        
     </div>
 </div>
     

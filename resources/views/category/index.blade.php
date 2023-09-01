@@ -21,7 +21,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                <a href="{{ route('category.create') }}" class="text-lg text-blue-700 dark:text-gray-500 underline">Add Categories</a>
+                        <a href="{{ route('category.create') }}" class="text-lg text-blue-700 dark:text-gray-500 underline">Add Categories</a>
 
                         <div>
                             <table class="table table-responsive table-strioe"> 

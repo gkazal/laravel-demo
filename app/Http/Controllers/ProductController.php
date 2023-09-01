@@ -55,48 +55,6 @@ class ProductController extends Controller
 
         return redirect(route('product'));
 
-
-
-        /*
-        
-         
-        $request->validate([
-            'code' => 'required',
-            'category_id' => 'required',
-            'product_name' => 'required|unique:sub_categoriess|max:255',
-
-            'price' => 'required',
-            'photo' => 'required|mimes:png,jpg,jpeg',
-        ]);
-
-        $imagename = '';
-        if($photo = $request->file('photo')){
-            $imagename = time().'-'.uniqid().'.'.$photo->getClientOriginalExtension();
-            // image move to products foler..
-            $photo->move('images/products', $imagename);
-        }
-        // if($imagename){
-        //            dd($request->all());
-
-        // }else{
-        //     return 'not done';
-        // }
-
-        // SubCategories::create([
-        //     'code' => $request->code,
-        //     'category_id' => $request->category_id,
-        //     'product_name' => $request->product_name,
-        //     'product_slug' => Str::of($request->product_name)->slug('-'),
-        //     'price' => $request->price,
-        //     'photo' => $imagename,
-        // ]);
-
-        // Session::flash('msg','Product added successfully');
-        return redirect()->back();
-        
-        
-        */
-
     }
 
     public function edit($id){
