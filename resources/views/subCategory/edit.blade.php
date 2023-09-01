@@ -15,54 +15,63 @@
 
 <h1>Edit SubCategory</h1>
 
-</div>
+<div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
         
-        <form class="border border-primary p-5 mt-5" method="post" action="{{route('subCategory.update', $data->id) }}" enctype="multipart/form-data">
-            @csrf
+                        <form class="border border-primary p-5 mt-5" method="post" action="{{route('subCategory.update', $data->id) }}" enctype="multipart/form-data">
+                            @csrf
 
-            <div>
-                <label for="" class="form-label">Code</label>
-                <input type="text" name="code"  class="form-control" placeholder="code" value="{{ $data->code }}" required>
-            </div>
+                            <div>
+                                <label for="" class="form-label">Code</label>
+                                <input type="text" name="code"  class="form-control" placeholder="code" value="{{ $data->code }}" required>
+                            </div>
 
-            <div class="form-group">
-                <label for="" class="form-label">Choose Category</label>
-                
-                <select class="form-select" name="category_id" aria-label="Default select example">
-                    <option value="0">Please Select Category</option>
-                    @foreach ($categories as $row)
-                        <option value="{{ $row->id }}" @if($row->id == $data->category_id) selected @endif > {{ $row->category_name }} </option>
-                    @endforeach
-                </select>
-            </div>
+                            <div class="form-group">
+                                <label for="" class="form-label">Choose Category</label>
+                                
+                                <select class="form-select" name="category_id" aria-label="Default select example">
+                                    <option value="0">Please Select Category</option>
+                                    @foreach ($categories as $row)
+                                        <option value="{{ $row->id }}" @if($row->id == $data->category_id) selected @endif > {{ $row->category_name }} </option>
+                                    @endforeach
+                                </select>
+                            </div>
 
-            <div class="mt-2">
-                <label for="" class="form-label">Product Name</label>
-                <input type="text" name="product_name" class="form-control" placeholder="Product Name" value="{{ $data->product_name }}" required>
-            </div>
+                            <div class="mt-2">
+                                <label for="" class="form-label">Product Name</label>
+                                <input type="text" name="product_name" class="form-control" placeholder="Product Name" value="{{ $data->product_name }}" required>
+                            </div>
 
-            <div class="mt-2">
-                <label for="" class="form-label">Price</label>
-                <input type="text" name="price" class="form-control" placeholder="Price" value="{{ $data->price }}"  required>
-            </div>
-           
-            <div class="mt-2">
-                <label for="" class="form-label">Photo</label>
-                <input type="file" name="photo" class="form-control" placeholder="Photo" value="{{ $data->Photo }}"  >
-                <img style="width: 60px;" src="{{ asset('images/products/'.$data->Photo) }}" alt="">
+                            <div class="mt-2">
+                                <label for="" class="form-label">Price</label>
+                                <input type="text" name="price" class="form-control" placeholder="Price" value="{{ $data->price }}"  required>
+                            </div>
+                        
+                            <div class="mt-2">
+                                <label for="" class="form-label">Photo</label>
+                                <input type="file" name="photo" class="form-control" placeholder="Photo" value="{{ $data->Photo }}"  >
+                                <img style="width: 60px;" src="{{ asset('images/products/'.$data->Photo) }}" alt="">
 
-            </div>
+                            </div>
 
-            <div class="mt-4">
-                <button type="submit" class="btn btn-primary " >Edit</button>
-            </div>
-            
+                            <div class="mt-4">
+                                <button type="submit" class="btn btn-primary " >Edit</button>
+                            </div>
+                            
 
 
-        </form>
+                        </form>
         
+                 
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
-    
+
 </body>
 </html>

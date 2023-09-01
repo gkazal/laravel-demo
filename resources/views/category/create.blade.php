@@ -19,9 +19,11 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
+            <a href="{{ route('category.index') }}" class="btn btn-sm btn-info mb-2">All Category</a>
+
                 <div class="card">
                     <div class="card-body">
-                        <a href="{{ route('category.index') }}" class="text-lg text-blue-700 dark:text-gray-500 underline">All Categories</a>
+
 
                         <form class="border border-primary p-5 mt-5" method="post" action="{{ route('category.store' )}}" enctype="multipart/form-data">
                             @csrf

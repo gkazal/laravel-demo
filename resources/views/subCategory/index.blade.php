@@ -17,6 +17,11 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
+
+            <a href="{{ route('category.index') }}" class="btn btn-sm btn-info mb-2">All Category</a>
+            <a href="{{ route('subCategory.create') }}" class="btn btn-sm btn-info mb-2">Add SubCategory</a>
+
+
                 <div class="card">
                     <div class="card-body">
                         <div>

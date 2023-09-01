@@ -12,7 +12,7 @@
                    Hey, {{ Auth::user()->name }}
                     {{ __("You're logged in!") }}
                 </div>
-                <a href="{{ url('/product') }}" class="text-lg text-blue-700 dark:text-gray-500 underline">All Products</a>
+                <a href="{{ route('subCategory.index') }}" class="btn btn-sm btn-info">All Products</a>
                 <a href="{{ route('category.index') }}" class="text-lg text-blue-700 dark:text-gray-500 underline">All Categories</a>
 
             </div>

@@ -21,7 +21,10 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        <a href="{{ route('category.create') }}" class="text-lg text-blue-700 dark:text-gray-500 underline">Add Categories</a>
+                        <a href="{{ route('category.create') }}" class="btn btn-sm btn-info mb-2">Add Category</a>
+                        <a href="{{ route('subCategory.index') }}" class="btn btn-sm btn-info mb-2">All SubCategory</a>
+
+
 
                         <div>
                             <table class="table table-responsive table-strioe"> 

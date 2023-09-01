@@ -24,7 +24,10 @@
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-blue-700 dark:text-gray-500 underline">Dashboards</a>
+                        <a href="{{ url('/dashboard') }}" class="text-sm text-blue-700 dark:text-gray-500 underline mb-2">Dashboards</a> <br>
+
+                        <a href="{{ route('subCategory.index') }}" class="btn btn-sm btn-info mb-2">All SubCategory</a>
+
                     @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Login</a>
 
