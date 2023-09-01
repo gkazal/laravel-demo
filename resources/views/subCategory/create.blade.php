@@ -15,53 +15,55 @@
 
 <h1>Create SubCategory</h1>
 
-</div>
-        
-        <form class="border border-primary p-5 mt-5" method="post" action="{{ route('subCategory.store') }}" enctype="multipart/form-data">
-            @csrf
+<div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form class="border border-primary p-5 mt-5" method="post" action="{{ route('subCategory.store') }}" enctype="multipart/form-data">
+                    @csrf
 
-            <div>
-                <label for="" class="form-label">Code</label>
-                <input type="text" name="code"  class="form-control" placeholder="code" required>
-            </div>
+                    <div>
+                        <label for="" class="form-label">Code</label>
+                        <input type="text" name="code"  class="form-control" placeholder="code" required>
+                    </div>
 
-            <div class="form-group">
-                <label for="" class="form-label">Choose Category</label>
+                    <div class="form-group">
+                        <label for="" class="form-label">Choose Category</label>
+                        
+                        <select class="form-select" name="category_id" aria-label="Default select example">
+                            <option value="0">Please Select Category</option>
+                            @foreach ($categories as $row)
+                                <option value="{{ $row->id }}"> {{ $row->category_name }} </option>
+                            @endforeach
+                        </select>
+
+                    </div>
+
+
+                    <div class="mt-2">
+                        <label for="" class="form-label">Product Name</label>
+                        <input type="text" name="product_name" class="form-control" placeholder="Product Name" required>
+                    </div>
+
+                    <div class="mt-2">
+                        <label for="" class="form-label">Price</label>
+                        <input type="text" name="price" class="form-control" placeholder="Price" required>
+                    </div>
                 
-                <select class="form-select" name="category_id" aria-label="Default select example">
-                    <option value="0">Please Select Category</option>
-                    @foreach ($categories as $row)
-                        <option value="{{ $row->id }}"> {{ $row->category_name }} </option>
-                    @endforeach
-                </select>
+                    <div class="mt-2">
+                        <label for="" class="form-label">Photo</label>
+                        <input type="file" name="photo" class="form-control" placeholder="Photo" >
+                    </div>
 
-            </div>
-
-
-            <div class="mt-2">
-                <label for="" class="form-label">Product Name</label>
-                <input type="text" name="product_name" class="form-control" placeholder="Product Name" required>
-            </div>
-
-            <div class="mt-2">
-                <label for="" class="form-label">Price</label>
-                <input type="text" name="price" class="form-control" placeholder="Price" required>
-            </div>
-           
-            <div class="mt-2">
-                <label for="" class="form-label">Photo</label>
-                <input type="file" name="photo" class="form-control" placeholder="Photo" >
-            </div>
-
-            <div class="mt-4">
-                <button type="submit" class="btn btn-primary " >Save</button>
-            </div>
-            
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-primary " >Save</button>
+                    </div>
+                    
 
 
-        </form>
-        
-    </div>
+                </form>
+</div>
+
+</div>
 </div>
     
 </body>
