@@ -18,12 +18,12 @@ Route::get('/', function () {
 
 
 // product crud operation...
-Route::get('/product', [ProductController::class, 'index'])->name('product');
-Route::get('/product/create', [ProductController::class, 'addProduct'])->name('addProduct');
-Route::post('/product', [ProductController::class, 'store'])->name('store');
-Route::get('/edit/{id}', [ProductController::class, 'edit'])->name('edit');
-Route::post('/update/{id}', [ProductController::class, 'update'])->name('update');
-Route::get('/delete/{id}', [ProductController::class, 'delete'])->name('delete');
+// Route::get('/product', [ProductController::class, 'index'])->name('product');
+// Route::get('/product/create', [ProductController::class, 'addProduct'])->name('addProduct');
+// Route::post('/product', [ProductController::class, 'store'])->name('store');
+// Route::get('/edit/{id}', [ProductController::class, 'edit'])->name('edit');
+// Route::post('/update/{id}', [ProductController::class, 'update'])->name('update');
+// Route::get('/delete/{id}', [ProductController::class, 'delete'])->name('delete');
 
 
 // ...category show...

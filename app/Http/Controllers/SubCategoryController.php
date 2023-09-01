@@ -112,11 +112,7 @@ class SubCategoryController extends Controller
 
         // update the category..
         SubCategory::where('id', $id)-> update([
-            // 'code'=>$request->code,
-            // 'category_id'=>$request->category_id,
-            // 'product_name'=>$request->product_name,
-            // 'price'=>$request->price,
-            // 'photo'=>$imagename,
+           
             'code' => $request->code,
             'category_id' => $request->category_id,
             'product_name' => $request->product_name,

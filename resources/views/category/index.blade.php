@@ -35,8 +35,8 @@
                             <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Name</th>   
-                                        <th>Slug</th>
+                                        <th>Category Name</th>   
+                                        <!-- <th>Slug</th> -->
                                         <th>Action</th>
                                     </tr>
 
@@ -47,7 +47,7 @@
                                         <tr>
                                             <td>{{$categories->id}}</td>
                                             <td>{{$categories->category_name}}</td>
-                                            <td>{{$categories->category_slug}}</td>                                           
+                                            <!-- <td>{{$categories->category_slug}}</td>                                            -->
 
                                             <td>
                                                 <a href="{{ route('category.edit', $categories->id) }}" class="btn btn-sm btn-info">edit</a>

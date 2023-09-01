@@ -74,10 +74,18 @@ class CategoryController extends Controller
     {
         // find the category..
         $category = Category::find($id); 
+
+        $request->validate([
+           
+            'category_name' => 'required|unique:categories|max:255',
+
+        ]);
+
+
         // update the category..
         $category->update([
             'category_name' => $request->category_name,
-            'category_slug' => Str::of($request->category_name)->slug('-'),
+            // 'category_slug' => Str::of($request->category_name)->slug('-'),
         ]);
         return redirect()->route('category.index');
     }
